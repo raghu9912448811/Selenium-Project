@@ -1,6 +1,7 @@
 package practice;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -42,6 +43,22 @@ public class Prog1 {
             Thread.sleep(2000);
             WebElement Signin1 = driver.findElement(By.xpath("//*[@id=\"signInSubmit\"]")); 
             Signin1.click();
+            
+            Thread.sleep(2000);
+            WebElement Best = driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[6]")); 
+            Best.click();
+            
+            Thread.sleep(2000);
+            WebElement Product = driver.findElement(By.xpath("//*[@id=\"B0BBFCG66M\"]/a/div/img")); 
+            Product.click();
+            
+            Thread.sleep(2000);
+            WebElement AddtoCart = driver.findElement(By.xpath("//*[@id=\"dealsx_atc_btn-announce\"]")); 
+            AddtoCart.click();
+            
+            Thread.sleep(2000);
+            WebElement GotoCart = driver.findElement(By.xpath("//*[@id=\"nav-cart-count\"]")); 
+            GotoCart.click();
             
             Thread.sleep(2000);
 

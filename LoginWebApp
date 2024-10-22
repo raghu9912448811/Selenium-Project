@@ -1,3 +1,5 @@
+package practice;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,17 +15,34 @@ public class Prog1 {
         WebDriver driver = new ChromeDriver();
 
         try {
-            
+            // Navigate to the web application login page
             driver.get("https://www.amazon.in/");
 
             Thread.sleep(2000);
-          
+            // Maximize browser window
             driver.manage().window().maximize();
 
             Thread.sleep(2000);
-         
-            WebElement usernameField = driver.findElement(By.id("username")); 
-            usernameField.sendKeys("your-username");
+            WebElement Signin = driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]")); 
+            Signin.click();
+            
+            Thread.sleep(2000);
+         // Find username input field and enter username
+            WebElement usernameField = driver.findElement(By.xpath("//*[@id=\"ap_email\"]")); 
+            usernameField.sendKeys("7989307822");
+            
+            Thread.sleep(2000);
+            WebElement Continue = driver.findElement(By.xpath("//*[@id=\"continue\"]")); 
+            Continue.click();
+            
+            Thread.sleep(2000);
+            WebElement Password = driver.findElement(By.xpath("//*[@id=\"ap_password\"]")); 
+            Password.sendKeys("Yeshu@1234");
+            
+            Thread.sleep(2000);
+            WebElement Signin1 = driver.findElement(By.xpath("//*[@id=\"signInSubmit\"]")); 
+            Signin1.click();
+            
             Thread.sleep(2000);
 
         } catch (Exception e) {
